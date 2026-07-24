@@ -23,15 +23,18 @@ print()
 
 
 print(7)
+
 print()
 
-
-print(10+10)
-print(10-5)
+print(10+10) # ADDITION
+print(10-5) # SUBTRACTION
 print(2*2) # MULTIPLICATION
 print(3/2) # DIVISION
 
 print()
 
+print("My age is ", 22, "I was born in", 2004)
 
-print("My age is ", 22)
+print()
+
+print('Bye World')
