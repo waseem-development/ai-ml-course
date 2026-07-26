@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:4F46E5,100:06B6D4&height=200&section=header&text=Code,%20Data%20%26%20Decisions&fontSize=46&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=From%20First%20Principles%20to%20Real-World%20AI%20%26%20Data%20Science&descSize=16&descAlignY=60&descColor=e0e7ff" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:4F46E5,100:06B6D4&height=200&section=header&text=CodeByPaxto&fontSize=60&fontColor=ffffff&fontAlignY=35&animation=fadeIn&desc=The%20AI%20%26%20ML%20Playground&descSize=20&descAlignY=58&descColor=e0e7ff" />
 
 </div>
 
@@ -14,20 +14,15 @@
 
 <div align="center">
 
-[![Stars](https://img.shields.io/github/stars/YOUR-USERNAME/YOUR-REPO?style=for-the-badge&color=7C3AED&labelColor=0f0f0f)](https://github.com/YOUR-USERNAME/YOUR-REPO/stargazers)
-[![Forks](https://img.shields.io/github/forks/YOUR-USERNAME/YOUR-REPO?style=for-the-badge&color=06B6D4&labelColor=0f0f0f)](https://github.com/YOUR-USERNAME/YOUR-REPO/network/members)
-[![Last Commit](https://img.shields.io/github/last-commit/YOUR-USERNAME/YOUR-REPO?style=for-the-badge&color=4F46E5&labelColor=0f0f0f)](https://github.com/YOUR-USERNAME/YOUR-REPO/commits/main)
-[![License](https://img.shields.io/github/license/YOUR-USERNAME/YOUR-REPO?style=for-the-badge&color=7C3AED&labelColor=0f0f0f)](./LICENSE)
+[![Followers](https://img.shields.io/github/followers/waseem-development?style=for-the-badge&color=7C3AED&labelColor=0f0f0f&label=FOLLOWERS)](https://github.com/waseem-development)
+[![Join Discord](https://img.shields.io/badge/Join%20our-Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/nmBJcYZTB)
+![README Views](https://komarev.com/ghpvc/?username=waseem-development&label=README+VIEWS&style=for-the-badge&color=06B6D4)
 
 </div>
 
 <div align="center">
-
-![Profile Views](https://komarev.com/ghpvc/?username=YOUR-USERNAME&label=README+VIEWS&style=for-the-badge&color=06B6D4)
-
+<sub>Built and taught by <b>Hafiz Waseem Ahmed</b> — you'll mostly hear people call me <b>Paxto</b>.</sub>
 </div>
-
-> **Note for the instructor:** replace every `YOUR-USERNAME/YOUR-REPO` below with your actual GitHub username and repo name once this is pushed — the badges are live and will start working immediately.
 
 <br/>
 
@@ -37,29 +32,35 @@
 
 <div align="center">
 
-## ✦ &nbsp; A B O U T &nbsp; T H I S &nbsp; C O U R S E &nbsp; ✦
+## ✦ &nbsp; W H A T &nbsp; I S &nbsp; T H I S , &nbsp; R E A L L Y ? &nbsp; ✦
 
 </div>
 
 <br/>
 
+**CodeByPaxto: The AI & ML Playground** is a from-scratch course that takes you from *"I've never written a line of code"* to *"I can clean a dataset, run a real analysis, and train my first machine learning model"* — without assuming you're a CS student, and without wasting your time on theory you'll never use.
+
 ```typescript
 const course: Course = {
-  title      : "Code, Data & Decisions",
+  name       : "CodeByPaxto: The AI & ML Playground",
   format     : "Live sessions · Fri, Sat, Sun · 1 hour each",
-  duration   : "16 weeks · 48 sessions",
-  audience   : "Non-CS students — for research, and optionally, a path into Data Science",
-
-  youWillBuild: [
-    "A real, working Python environment (Miniconda + VS Code + Git/GitHub)",
-    "Fluency in Python — from print() to functions, files, and errors",
-    "Just enough statistics and math to actually use them",
-    "Practical skills in NumPy, Pandas, Matplotlib & Seaborn",
-    "A real EDA workflow, and your first ML models",
-    "A capstone project you can point to and say: I built this.",
+  builtFor   : [
+    "Researchers who are tired of waiting on someone else for an analysis",
+    "Students from any field who keep hearing 'AI' and want to actually get it",
+    "Anyone curious about Data Science, with zero programming background",
   ],
 
-  philosophy : "Every phase exists because the next one needs it.",
+  youWillLeaveWith: [
+    "A real, working Python setup you actually understand — not a black box",
+    "Fluency in Python: variables, logic, functions, files, real debugging",
+    "Just enough statistics and math to use them, not to fear them",
+    "Hands-on skill in NumPy, Pandas, Matplotlib & Seaborn",
+    "A genuine EDA workflow, and your first working ML models",
+    "A capstone project you built yourself, start to finish",
+  ],
+
+  notFor     : "People looking for a certificate to collect and forget",
+  philosophy : "Every single topic exists because the next one needs it. Nothing is taught 'just because.'",
 };
 ```
 
@@ -67,8 +68,8 @@ const course: Course = {
 
 <div align="center">
 
-*"You're not here to become software engineers.*
-*You're here so your research never has to wait on someone else."*
+*"You're not here to become a software engineer.*
+*You're here so your research — or your curiosity — never has to wait on someone else again."*
 
 </div>
 
@@ -101,8 +102,8 @@ const course: Course = {
 
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=plotly&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge&logoColor=white)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)
+![Seaborn](https://img.shields.io/badge/Seaborn-4C72B0?style=for-the-badge)
 ![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 
@@ -122,17 +123,17 @@ const course: Course = {
 
 <br/>
 
-| Phase | Weeks | Focus | Status |
-|:---|:---:|:---|:---:|
-| **1 · Orientation** | 1 | What a computer is, why Python, first lines of code | ✅ |
-| **2 · Python Core** | 2–4 | Functions, lists, dicts, files, errors, operators, conditionals | 🔄 |
-| **3 · Stats & Math for DS** | 5–7 | Just the statistics and math the next phase needs | ⏳ |
-| **4 · NumPy, Pandas & Viz** | 8–10 | The real tools researchers use to clean and visualize data | ⏳ |
-| **5 · Exploratory Data Analysis** | 11–12 | Reading a real dataset before modeling anything | ⏳ |
-| **6 · ML Basics + Capstone** | 13–16 | First models, and a project of your own choosing | ⏳ |
+| Phase | Focus |
+|:---|:---|
+| **1 · Orientation** | What a computer is, why Python, first lines of code |
+| **2 · Python Core** | Functions, lists, dicts, files, errors, operators, conditionals |
+| **3 · Stats & Math for DS** | Just the statistics and math the next phase actually needs |
+| **4 · NumPy, Pandas & Viz** | The real tools researchers use to clean and visualize data |
+| **5 · Exploratory Data Analysis** | Reading a real dataset before modeling anything |
+| **6 · ML Basics + Capstone** | First models, and a project of your own choosing |
 
 <div align="center">
-<sub>✅ Complete &nbsp;·&nbsp; 🔄 In Progress &nbsp;·&nbsp; ⏳ Upcoming — update this table as the course moves forward</sub>
+<sub>Six phases. Each one exists because the next one needs it.</sub>
 </div>
 
 <br/>
@@ -143,21 +144,29 @@ const course: Course = {
 
 <div align="center">
 
-## 📅 &nbsp; S E S S I O N S &nbsp; I N D E X
+## 🎮 &nbsp; D O &nbsp; Y O U &nbsp; B E L O N G &nbsp; H E R E ?
 
 </div>
 
 <br/>
 
-| # | Session | Topics | Slides | Notes |
-|:---:|:---|:---|:---:|:---:|
-| 1–2 | Orientation & The Big Picture | Programming, binary, compiled vs. interpreted, why Python, AI & DS landscape | [📽️](./slides/course_day1_day2.pptx) | [📄](./guides/day1_deep_dive.md) |
-| 3 | Miniconda, Virtual Envs & First Code | Conda, environments, VS Code setup, print(), variables, data types | [📽️](./slides/variables_datatypes.pptx) | [📄](./guides/session3_prep_guide.md) |
-| 4 | Operators & Conditionals | Arithmetic → logical operators, BODMAS, if/elif/else, nested if | [📽️](./slides/session4_operators_conditionals.pptx) | [📄](./guides/session4_code_examples.md) |
-| 5 | Loops | for, while, break, continue | 🔜 | 🔜 |
-| ... | ... | ... | ... | ... |
+**You'll probably feel right at home if:**
 
-<sub>Keep this table updated each week — it doubles as the syllabus for anyone browsing the repo.</sub>
+- ✅ You've stared at an Excel sheet and thought *"there has to be a better way"*
+- ✅ You've heard "AI" mentioned 47 times this week and want to actually understand it, not just nod along in meetings
+- ✅ Your research needs an analysis, a chart, or a clean dataset — and you're done waiting on someone else for it
+- ✅ You can read the words `SyntaxError` without immediately questioning your life choices
+- ✅ You're willing to Google things. A lot. We all still do — instructors included
+
+**You might be in the wrong repo if:**
+
+- ❌ You already have a PhD in Computer Science *(respectfully, you're overqualified — but stay, the memes in Discord are decent)*
+- ❌ You think "pseudocode" is a code named Pseudo
+- ❌ You believe NumPy is a font
+
+<div align="center">
+<sub>If none of the above applied — congratulations, you're exactly who this was built for. Welcome in.</sub>
+</div>
 
 <br/>
 
@@ -167,71 +176,7 @@ const course: Course = {
 
 <div align="center">
 
-## 📂 &nbsp; R E P O &nbsp; S T R U C T U R E
-
-</div>
-
-<br/>
-
-```
-code-data-decisions/
-├── slides/                  # All .pptx lecture decks
-│   ├── course_day1_day2.pptx
-│   ├── variables_datatypes.pptx
-│   └── session4_operators_conditionals.pptx
-├── guides/                  # Instructor prep guides & student references
-│   ├── day1_deep_dive.md
-│   ├── session3_prep_guide.md
-│   └── session4_code_examples.md
-├── tasks/                   # Daily/session task specs
-├── student-submissions/     # (optional) student task uploads, organized by session
-├── roadmap.md                # Full week-by-week syllabus
-└── README.md                 # You are here
-```
-
-<br/>
-
----
-
-<br/>
-
-<div align="center">
-
-## 🚀 &nbsp; G E T T I N G &nbsp; S T A R T E D
-
-</div>
-
-<br/>
-
-**1. Install the tools** (see Session 3 guide for full walkthrough):
-```bash
-# Install Miniconda, then create your course environment
-conda create --name ds-course python=3.11
-conda activate ds-course
-```
-
-**2. Clone this repo:**
-```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
-cd YOUR-REPO
-```
-
-**3. Open it in VS Code and select your `ds-course` interpreter:**
-```
-Ctrl+Shift+P → "Python: Select Interpreter" → ds-course
-```
-
-You're ready for Session 1.
-
-<br/>
-
----
-
-<br/>
-
-<div align="center">
-
-## 📊 &nbsp; R E P O &nbsp; A N A L Y T I C S
+## 🤝 &nbsp; C O N N E C T
 
 </div>
 
@@ -239,44 +184,15 @@ You're ready for Session 1.
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=YOUR-USERNAME&repo=YOUR-REPO&theme=tokyonight&hide_border=true&bg_color=0d0d0d&title_color=06B6D4&text_color=e0e7ff&icon_color=7C3AED" />
-
-</div>
-
-<br/>
-
-<div align="center">
-
-**Live commit/issue/PR activity for this repo** — generate your own graph free at [repobeats.axiom.co](https://repobeats.axiom.co), paste your repo URL, then swap the image below:
-
-<img src="https://repobeats.axiom.co/api/embed/REPLACE-WITH-YOUR-REPOBEATS-ID.svg" alt="Repobeats analytics image" width="90%"/>
-
-</div>
-
-<sub>This updates automatically over time as commits/issues/PRs happen — a nice living pulse for the repo instead of a static badge.</sub>
+[![Discord](https://img.shields.io/badge/Discord-CodeByPaxto-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/nmBJcYZTB)
+[![GitHub](https://img.shields.io/badge/GitHub-waseem--development-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/waseem-development)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hafiz-waseem-ahmed-50a4b2347/)
+[![Email](https://img.shields.io/badge/Email-Send%20a%20message-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:waseemdevelopment2002@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Chat-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/923412011877)
 
 <br/>
 
----
-
-<br/>
-
-<div align="center">
-
-## 🤝 &nbsp; F O R &nbsp; S T U D E N T S
-
-</div>
-
-<br/>
-
-<div align="center">
-
-Found a typo, a bug in the example code, or have a question about a session?
-
-[![Open an Issue](https://img.shields.io/badge/Open%20an%20Issue-7C3AED?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR-USERNAME/YOUR-REPO/issues/new)
-[![Discussions](https://img.shields.io/badge/Start%20a%20Discussion-06B6D4?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR-USERNAME/YOUR-REPO/discussions)
-
-*Submitting your daily task? Push it to your own fork and open a Pull Request — it's genuinely good practice for the GitHub skills this course teaches.*
+*Questions, feedback, stuck on a task, or just want to talk about AI — the Discord server is the fastest way to reach me.*
 
 </div>
 
@@ -292,6 +208,8 @@ Found a typo, a bug in the example code, or have a question about a session?
 
 <br/>
 
-**Code, Data & Decisions &nbsp;·&nbsp; See you in class.**
+**CodeByPaxto &nbsp;·&nbsp; The AI & ML Playground**
+<br/>
+<sub>See you in class.</sub>
 
 </div>
