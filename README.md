@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:4F46E5,100:06B6D4&height=200&section=header&text=CodeByPaxto&fontSize=60&fontColor=ffffff&fontAlignY=35&animation=fadeIn&desc=The%20AI%20%26%20ML%20Playground&descSize=20&descAlignY=58&descColor=e0e7ff" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:4F46E5,100:06B6D4&height=200&section=header&text=CodeByPaxto&fontSize=60&fontColor=ffffff&fontAlignY=35&desc=The%20AI%20%26%20ML%20Playground&descSize=20&descAlignY=58&descColor=e0e7ff" />
 
 </div>
 
@@ -204,7 +204,7 @@ const course: Course = {
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:4F46E5,100:7C3AED&height=130&section=footer&animation=fadeIn" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:4F46E5,100:7C3AED&height=130&section=footer" />
 
 <br/>
 
