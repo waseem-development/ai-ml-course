@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7C3AED,50:4F46E5,100:06B6D4&height=200&section=header&text=CodeByPaxto&fontSize=60&fontColor=ffffff&fontAlignY=35&desc=The%20AI%20%26%20ML%20Playground&descSize=20&descAlignY=58&descColor=e0e7ff" />
+# 🧠⚡ CodeByPaxto
+
+### *The AI & ML Playground*
+
+<img src="https://img.shields.io/badge/-‎-7C3AED?style=flat-square&labelColor=7C3AED" height="4" width="120"/><img src="https://img.shields.io/badge/-‎-4F46E5?style=flat-square&labelColor=4F46E5" height="4" width="120"/><img src="https://img.shields.io/badge/-‎-06B6D4?style=flat-square&labelColor=06B6D4" height="4" width="120"/>
 
 </div>
 
@@ -204,7 +208,7 @@ const course: Course = {
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,50:4F46E5,100:7C3AED&height=130&section=footer" />
+<img src="https://img.shields.io/badge/-‎-06B6D4?style=flat-square&labelColor=06B6D4" height="4" width="120"/><img src="https://img.shields.io/badge/-‎-4F46E5?style=flat-square&labelColor=4F46E5" height="4" width="120"/><img src="https://img.shields.io/badge/-‎-7C3AED?style=flat-square&labelColor=7C3AED" height="4" width="120"/>
 
 <br/>
 
