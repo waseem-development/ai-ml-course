@@ -1,0 +1,5 @@
+# print("\"a\"")
+# print("I am learning Python \nI love \n\n\n Python")
+print("I am Waseem\t I am a student")
+print("I am about to use \\")
+print("I am about to use \'bla bla bla\'")
