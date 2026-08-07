@@ -66,6 +66,40 @@ l1 = [1, 8, 7, 2, 21, 15]
 
 
 # .clear()
-l1.clear()
-print(l1)
+# l1.clear()
+# print(l1)
 
+
+# ------------  Combining two or more list  ------------
+# a = [1,2,3,4,5]
+# b = [6,7,8,9,10]
+# d = [11,12,13,15,14]
+# c = a + b + d
+# print(c)
+# print()
+
+
+# ------------  Repeating the elements of an list (array)  ------------
+# a = [1,2,3,4,5]
+
+# print(a * 2)
+
+
+
+# Mutability Trap
+
+# a = [[]] * 3
+# # a[0] = 3
+# a[0].append(5)
+# print(a)
+
+# print(id(a[0]))
+# print(id(a[1]))
+# print(id(a[2]))
+
+
+
+a = [1, 2, 3, 4, 5]
+print(max(a))
+print(min(a))
+print(sum(a))
