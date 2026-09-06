@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Object-Oriented Programming — Student Handout</title>
+    <style>
+        :root {
+            --bg: #0d0e1a;
+            --panel: #161829;
+            --panel-border: #2a2d47;
+            --gold: #ffd166;
+            --teal: #5ee6d0;
+            --forest: #7c6cf0;
+            --pink: #ff6ec7;
+            --text: #eef0fb;
+            --muted: #9a9dc2;
+            --code-bg: #0a0b14;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 15% 0%, rgba(124, 108, 240, 0.16), transparent 45%),
+                radial-gradient(circle at 85% 15%, rgba(94, 230, 208, 0.12), transparent 40%),
+                var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.65;
+        }
+
+        .page {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 48px 32px 80px;
+        }
+
+        header.title-block {
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 20px;
+            margin-bottom: 36px;
+        }
+
+        header.title-block h1 {
+            margin: 0;
+            font-size: 2.4em;
+            letter-spacing: 0.5px;
+            background: linear-gradient(90deg, var(--teal), var(--forest) 55%, var(--pink));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        header.title-block .subtitle {
+            color: var(--muted);
+            font-size: 1.05em;
+            margin-top: 6px;
+        }
+
+        header.title-block .tagline {
+            color: var(--teal);
+            font-size: 0.95em;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        section {
+            margin-bottom: 38px;
+        }
+
+        h2 {
+            color: var(--teal);
+            font-size: 1.25em;
+            border-left: 4px solid var(--forest);
+            padding-left: 12px;
+            margin-bottom: 14px;
+        }
+
+        h3 {
+            color: var(--pink);
+            font-size: 1.02em;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: var(--text);
+            margin: 10px 0;
+        }
+
+        .muted {
+            color: var(--muted);
+        }
+
+        ul,
+        ol {
+            padding-left: 22px;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--panel-border);
+            border-left: 3px solid var(--teal);
+            border-radius: 6px;
+            padding: 14px 16px;
+            overflow-x: auto;
+            font-size: 0.92em;
+        }
+
+        code {
+            font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+            color: #c9e8d8;
+        }
+
+        .callout {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            border-left: 4px solid var(--gold);
+            border-radius: 6px;
+            padding: 14px 18px;
+            margin: 14px 0;
+        }
+
+        .callout .label {
+            color: var(--gold);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .output {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin: 10px 0;
+            font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+            color: var(--teal);
+            font-size: 0.9em;
+        }
+
+        .output .label {
+            color: var(--muted);
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.85em;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid var(--panel-border);
+            padding: 8px 12px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+
+        th {
+            background: var(--panel);
+            color: var(--gold);
+        }
+
+        .trace-step {
+            background: var(--panel);
+            border: 1px solid var(--panel-border);
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin: 4px 0;
+            font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+            font-size: 0.88em;
+        }
+
+        .trace-step .arrow {
+            color: var(--gold);
+            margin-right: 8px;
+        }
+
+        hr.divider {
+            border: none;
+            border-top: 1px solid var(--panel-border);
+            margin: 36px 0;
+        }
+
+        .summary-box {
+            background: var(--panel);
+            border: 1px solid var(--forest);
+            border-radius: 8px;
+            padding: 20px 22px;
+        }
+
+        .summary-box li {
+            color: var(--text);
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.85em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <header class="title-block">
+            <h1>Object-Oriented Programming</h1>
+            <div class="subtitle">Student Handout</div>
+            <div class="tagline">From bundling data and behavior together to how real software is actually structured
+            </div>
+        </header>
+
+        <section>
+            <h2>1. What is Object-Oriented Programming?</h2>
+            <p>Object-Oriented Programming (OOP) is a way of organizing a program around <strong>objects</strong> —
+                things that bundle data (attributes) and behavior (methods) together, instead of keeping data and the
+                functions that act on it completely separate.</p>
+            <div class="callout">
+                <span class="label">Easy mental model:</span>
+                OOP = describing a "thing" once (a class), and then creating as many real copies of that thing (objects)
+                as you need — each with its own data, but sharing the same behavior.
+            </div>
+            <pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        return f"{self.name} says Woof!"
+
+my_dog = Dog("Rex")
+print(my_dog.bark())</code></pre>
+            <div class="output"><span class="label">Output:</span>Rex says Woof!</div>
+        </section>
+
+        <section>
+            <h2>2. Classes vs Objects</h2>
+            <p>A <strong>class</strong> is a blueprint — it describes what something will look like and what it can do,
+                but it isn't an actual thing by itself. An <strong>object</strong> (also called an instance) is a real,
+                concrete thing built from that blueprint.</p>
+            <div class="callout">
+                <span class="label">Everyday example:</span>
+                "Dog" as a concept is a class — it describes ears, a tail, barking. Your actual pet Rex is an object:
+                one specific dog built from that description, with his own name and age.
+            </div>
+            <pre><code>class Dog:
+    pass
+
+rex = Dog()      # an object (instance) of Dog
+buddy = Dog()    # another, completely separate object
+
+print(rex is buddy)  # False — two different objects</code></pre>
+            <p>You can create as many objects as you want from a single class, and each one is independent of the
+                others.</p>
+        </section>
+
+        <section>
+            <h2>3. The <code>__init__</code> Constructor and <code>self</code></h2>
+            <p><code>__init__</code> is a special method that runs automatically whenever a new object is created from a
+                class. It's used to set up the object's initial data.</p>
+            <p><code>self</code> refers to the specific object being worked with. Every method inside a class takes
+                <code>self</code> as its first parameter so it knows which object's data to use.</p>
+            <pre><code>class Student:
+    def __init__(self, name, cgpa):
+        self.name = name
+        self.cgpa = cgpa
+
+ali = Student("Ali", 3.7)
+sara = Student("Sara", 3.9)
+
+print(ali.name, ali.cgpa)     # Ali 3.7
+print(sara.name, sara.cgpa)   # Sara 3.9</code></pre>
+            <div class="callout">
+                <span class="label">Notice:</span>
+                Even though both objects were built from the same class, <code>self.name</code> and
+                <code>self.cgpa</code> hold completely different values for <code>ali</code> and <code>sara</code>.
+                <code>self</code> is what keeps each object's data separate.
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Attributes and Methods</h2>
+            <p>An <strong>attribute</strong> is a piece of data that belongs to an object (a variable stored on
+                <code>self</code>). A <strong>method</strong> is a function that belongs to a class and describes
+                something the object can do.</p>
+            <pre><code>class Car:
+    def __init__(self, brand, fuel):
+        self.brand = brand      # attribute
+        self.fuel = fuel        # attribute
+
+    def drive(self):            # method
+        if self.fuel > 0:
+            self.fuel -= 10
+            return f"{self.brand} is driving. Fuel left: {self.fuel}"
+        return f"{self.brand} is out of fuel!"
+
+car = Car("Toyota", 50)
+print(car.drive())   # Toyota is driving. Fuel left: 40
+print(car.drive())   # Toyota is driving. Fuel left: 30</code></pre>
+            <p>Notice how calling <code>drive()</code> changes the object's own attribute (<code>self.fuel</code>) — the
+                object remembers its own state between method calls.</p>
+        </section>
+
+        <section>
+            <h2>5. Instance Attributes vs Class Attributes</h2>
+            <p>An <strong>instance attribute</strong> belongs to one specific object (set with
+                <code>self.something</code>, usually inside <code>__init__</code>). A <strong>class attribute</strong>
+                belongs to the class itself, and is shared by every object created from it.</p>
+            <pre><code>class Student:
+    school = "UoB"          # class attribute — shared by all students
+
+    def __init__(self, name):
+        self.name = name     # instance attribute — unique per student
+
+a = Student("Ali")
+b = Student("Sara")
+
+print(a.school, b.school)   # UoB UoB
+print(a.name, b.name)       # Ali Sara</code></pre>
+            <div class="callout">
+                <span class="label">Rule of thumb:</span>
+                If every object should start with the exact same value, and that value rarely changes, a class attribute
+                usually fits. If the value is unique to each object, it belongs on <code>self</code> as an instance
+                attribute.
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Encapsulation</h2>
+            <p>Encapsulation means bundling data and the methods that work on that data together inside one object, and
+                controlling how that data is accessed or changed from the outside — instead of letting any part of the
+                program modify it freely.</p>
+            <pre><code>class BankAccount:
+    def __init__(self, balance):
+        self._balance = balance   # "protected" by convention (single underscore)
+
+    def deposit(self, amount):
+        if amount > 0:
+            self._balance += amount
+
+    def get_balance(self):
+        return self._balance
+
+account = BankAccount(1000)
+account.deposit(500)
+print(account.get_balance())  # 1500</code></pre>
+            <div class="callout">
+                <span class="label">Why this matters:</span>
+                Instead of changing <code>account._balance</code> directly from anywhere in the program, changes go
+                through <code>deposit()</code>, which can enforce rules — like refusing a negative deposit. Python
+                doesn't strictly block direct access; the underscore is a signal to other programmers: "treat this as
+                internal."
+            </div>
+        </section>
+
+        <section>
+            <h2>7. Inheritance</h2>
+            <p>Inheritance lets one class (the <strong>child</strong>) reuse the attributes and methods of another class
+                (the <strong>parent</strong>), instead of rewriting the same code again. The child can also add new
+                behavior or change existing behavior.</p>
+            <pre><code>class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def speak(self):
+        return f"{self.name} makes a sound."
+
+class Cat(Animal):          # Cat inherits from Animal
+    def speak(self):
+        return f"{self.name} says Meow!"
+
+class Fish(Animal):
+    pass   # Fish doesn't override speak() — it uses Animal's version
+
+cat = Cat("Whiskers")
+fish = Fish("Nemo")
+
+print(cat.speak())    # Whiskers says Meow!
+print(fish.speak())   # Nemo makes a sound.</code></pre>
+            <p><code>Fish</code> got a working <code>speak()</code> method for free, just by inheriting from
+                <code>Animal</code> — it never had to define one itself.</p>
+        </section>
+
+        <section>
+            <h2>8. Method Overriding and <code>super()</code></h2>
+            <p>A child class can <strong>override</strong> a parent's method by defining a method with the same name —
+                Python will use the child's version instead. <code>super()</code> lets the child still call the parent's
+                original version when it's useful, rather than replacing it completely.</p>
+            <pre><code>class Employee:
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+class Manager(Employee):
+    def __init__(self, name, salary, team_size):
+        super().__init__(name, salary)   # reuse Employee's setup
+        self.team_size = team_size
+
+m = Manager("Ayesha", 90000, 5)
+print(m.name, m.salary, m.team_size)  # Ayesha 90000 5</code></pre>
+            <div class="callout">
+                <span class="label">Notice:</span>
+                <code>Manager</code> didn't need to repeat <code>self.name = name</code> and
+                <code>self.salary = salary</code> — <code>super().__init__()</code> handed that work off to
+                <code>Employee</code>, and <code>Manager</code> only added what was new: <code>team_size</code>.
+            </div>
+        </section>
+
+        <section>
+            <h2>9. Polymorphism</h2>
+            <p>Polymorphism means objects of different classes can respond to the same method call, each in their own
+                way. The calling code doesn't need to know exactly which class it's dealing with — it just calls the
+                method and trusts each object to handle it correctly.</p>
+            <pre><code>class Cat:
+    def speak(self):
+        return "Meow!"
+
+class Dog:
+    def speak(self):
+        return "Woof!"
+
+class Duck:
+    def speak(self):
+        return "Quack!"
+
+animals = [Cat(), Dog(), Duck()]
+
+for animal in animals:
+    print(animal.speak())</code></pre>
+            <div class="output"><span class="label">Output:</span>Meow!
+                Woof!
+                Quack!</div>
+            <p>The loop calls <code>.speak()</code> the exact same way on every object, but each class provides its own
+                version of what that means.</p>
+        </section>
+
+        <section>
+            <h2>10. Abstraction</h2>
+            <p>Abstraction means exposing only the necessary details of how something works, while hiding the
+                complicated logic behind a simple method call. As a user of an object, you usually only need to know
+                <em>what</em> a method does, not <em>how</em> it does it internally.</p>
+            <pre><code>class CoffeeMachine:
+    def make_coffee(self):
+        self._heat_water()
+        self._grind_beans()
+        self._brew()
+        return "Coffee is ready!"
+
+    def _heat_water(self):
+        pass  # internal detail
+
+    def _grind_beans(self):
+        pass  # internal detail
+
+    def _brew(self):
+        pass  # internal detail
+
+machine = CoffeeMachine()
+print(machine.make_coffee())</code></pre>
+            <p>Whoever uses <code>CoffeeMachine</code> only needs to call <code>make_coffee()</code> — they don't need
+                to know or worry about how heating, grinding, or brewing actually happen underneath.</p>
+        </section>
+
+        <section>
+            <h2>11. Dunder Methods: Customizing Built-in Behavior</h2>
+            <p>Python objects can define special "dunder" (double-underscore) methods that let them work with built-in
+                functions and operators in a customized way. <code>__init__</code> is one example; <code>__str__</code>
+                and <code>__repr__</code> are two more you'll see constantly.</p>
+            <pre><code>class Product:
+    def __init__(self, name, price):
+        self.name = name
+        self.price = price
+
+    def __str__(self):
+        return f"{self.name} — ${self.price}"
+
+item = Product("Laptop", 1200)
+print(item)          # Laptop — $1200 (uses __str__ automatically)</code></pre>
+            <div class="callout">
+                <span class="label">Without <code>__str__</code>:</span>
+                <code>print(item)</code> would instead show something unhelpful like
+                <code>&lt;__main__.Product object at 0x7f...&gt;</code>. Defining <code>__str__</code> tells Python
+                exactly how the object should describe itself when printed.
+            </div>
+        </section>
+
+        <section>
+            <h2>12. The Four Pillars: Quick Recap</h2>
+            <table>
+                <tr>
+                    <th>Pillar</th>
+                    <th>Idea</th>
+                    <th>Example from above</th>
+                </tr>
+                <tr>
+                    <td>Encapsulation</td>
+                    <td>Bundle data + behavior, control access</td>
+                    <td><code>BankAccount</code> with <code>deposit()</code></td>
+                </tr>
+                <tr>
+                    <td>Inheritance</td>
+                    <td>Reuse a parent class's data/behavior</td>
+                    <td><code>Cat(Animal)</code></td>
+                </tr>
+                <tr>
+                    <td>Polymorphism</td>
+                    <td>Same method call, different behavior per class</td>
+                    <td><code>animal.speak()</code></td>
+                </tr>
+                <tr>
+                    <td>Abstraction</td>
+                    <td>Hide internal complexity behind a simple interface</td>
+                    <td><code>machine.make_coffee()</code></td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>13. OOP vs Procedural: Quick Comparison</h2>
+            <table>
+                <tr>
+                    <th>Procedural (functions + data separate)</th>
+                    <th>Object-Oriented (bundled together)</th>
+                </tr>
+                <tr>
+                    <td>Data passed around between standalone functions</td>
+                    <td>Data lives inside objects alongside the methods that use it</td>
+                </tr>
+                <tr>
+                    <td>Harder to model many similar "things" cleanly</td>
+                    <td>A class describes the shape once; many objects reuse it</td>
+                </tr>
+                <tr>
+                    <td>Natural for short scripts and simple, linear tasks</td>
+                    <td>Natural for larger programs with many related, stateful things</td>
+                </tr>
+            </table>
+            <div class="callout">
+                <span class="label">Quick gut-check:</span>
+                Ask "am I going to need many similar things, each with their own data and shared behavior?" If yes, a
+                class usually fits well. If it's a one-off calculation or simple linear script, plain functions are
+                often simpler.
+            </div>
+        </section>
+
+        <section>
+            <h2>14. Common Mistakes</h2>
+            <ul>
+                <li><strong>Forgetting <code>self</code>:</strong> Leaving <code>self</code> out of a method's
+                    parameters causes an error, since Python always passes the object automatically as the first
+                    argument.</li>
+                <li><strong>Confusing the class with an object:</strong> <code>Dog</code> is the blueprint;
+                    <code>Dog()</code> creates an actual object. Trying to use the class itself as if it already had
+                    data will fail.</li>
+                <li><strong>Modifying a class attribute expecting it to be per-object:</strong> If a mutable class
+                    attribute (like a list) is changed through one object, every object sharing that class attribute is
+                    affected too.</li>
+                <li><strong>Forgetting <code>super().__init__()</code>:</strong> A child class that defines its own
+                    <code>__init__</code> without calling <code>super().__init__()</code> may lose the setup work the
+                    parent class was supposed to do.</li>
+                <li><strong>Overriding a method but breaking its expected behavior:</strong> Other code calling that
+                    method may assume it still behaves the way the parent's version did.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>15. OOP + Everything Else: The Connections</h2>
+            <p>OOP doesn't replace the earlier topics — it often builds on top of them. A class's methods can use
+                conditionals, loops, dictionaries as attributes, and even closures and decorators.</p>
+            <pre><code>class Cache:
+    def __init__(self):
+        self._data = {}          # a dictionary stored as an attribute
+
+    def get_or_compute(self, key, compute_fn):
+        if key not in self._data:
+            self._data[key] = compute_fn()
+        return self._data[key]</code></pre>
+            <div class="callout">
+                <span class="label">Notice:</span>
+                <code>@staticmethod</code>, <code>@classmethod</code>, and <code>@property</code> — covered in the
+                decorators handout — are themselves decorators specifically designed to work with classes.
+            </div>
+        </section>
+
+        <section>
+            <h2>16. Where OOP Is Actually Used</h2>
+            <p class="muted">Not just a classroom exercise — almost every substantial piece of software leans on OOP
+                somewhere. Here's where you'll actually run into it.</p>
+
+            <h3>🎮 Game Development</h3>
+            <p>A character, an enemy, a weapon, a power-up — each is naturally modeled as a class, with its own
+                attributes (health, position, speed) and methods (move, attack, take damage).</p>
+
+            <h3>🌐 Web Frameworks</h3>
+            <p>Django models represent database tables as classes. FastAPI and Flask often organize request handlers,
+                database sessions, and services as classes with their own state and methods.</p>
+
+            <h3>📱 GUI and Mobile Apps</h3>
+            <p>Buttons, windows, screens, and widgets are almost always represented as objects — each button knows its
+                own label, position, and what to do when clicked.</p>
+
+            <h3>🤖 AI / Machine Learning</h3>
+            <p>A model, a layer, a dataset loader, or a training pipeline is commonly built as a class — for example,
+                PyTorch's <code>nn.Module</code> is a class that every neural network layer or model inherits from.</p>
+
+            <h3>🗄️ Databases and ORMs</h3>
+            <p>Object-Relational Mappers (ORMs) represent each database table as a class and each row as an object, so
+                code can work with <code>user.name</code> instead of raw SQL rows.</p>
+
+            <h3>🧩 Large Codebases in General</h3>
+            <p>Any system with many related "things" that share behavior but carry their own data — users, orders,
+                sensors, documents — tends to reach for classes to keep that structure organized as the codebase grows.
+            </p>
+        </section>
+
+        <section>
+            <h2>17. OOP at Real Companies</h2>
+            <p class="muted">These are well-known, publicly documented examples of the same OOP ideas from this handout,
+                used at scale.</p>
+
+            <h3>🎮 Unity &amp; Unreal Engine — Game Objects</h3>
+            <p>Both engines (used by countless game studios) are built around the idea that everything in a game —
+                characters, cameras, lights, obstacles — is an object with attributes and behavior, often organized
+                through class inheritance and components.</p>
+
+            <h3>🐍 Django (used by Instagram, Pinterest, Mozilla)</h3>
+            <p>Django's model layer represents every database table as a Python class, with each row becoming an object
+                — the same class/object idea from this handout, powering real production databases.</p>
+
+            <h3>🔥 PyTorch (developed at Meta / Facebook AI)</h3>
+            <p>Every neural network in PyTorch is written as a class inheriting from <code>nn.Module</code>, with layers
+                as attributes and the forward pass as a method — inheritance and encapsulation applied directly to AI
+                model-building.</p>
+
+            <h3>☕ Java at Large Enterprises (banks, airlines, telecoms)</h3>
+            <p>Java, one of the most widely used enterprise languages, is built entirely around classes and objects —
+                modeling customers, accounts, transactions, and flights as objects is standard practice across huge,
+                long-running systems.</p>
+
+            <h3>🍎 Apple — UIKit / SwiftUI</h3>
+            <p>iOS app development represents every screen element — buttons, labels, views — as an object, with
+                inheritance used heavily to share common behavior across different kinds of UI components.</p>
+
+            <div class="callout">
+                <span class="label">Takeaway:</span>
+                None of these companies invented a special kind of OOP — they're all organizing large amounts of related
+                data and behavior using the exact same class/object pattern practiced in this handout, just at a much
+                bigger scale.
+            </div>
+        </section>
+
+        <section>
+            <h2>18. Practice Exercises</h2>
+            <ol>
+                <li>Create a <code>Rectangle</code> class with <code>width</code> and <code>height</code>, and a method
+                    <code>area()</code> that returns the area.</li>
+                <li>Create a <code>Person</code> class with <code>name</code> and <code>age</code>, and a method
+                    <code>greet()</code> that returns a greeting string.</li>
+                <li>Create a <code>Vehicle</code> class, then a <code>Car</code> class that inherits from it and
+                    overrides one method.</li>
+                <li>Add a class attribute to one of your classes that is shared across all objects, and demonstrate that
+                    it's shared.</li>
+                <li>Write three classes that each define a <code>speak()</code> or similar method, then loop over a list
+                    of objects and call that method on each — demonstrating polymorphism.</li>
+                <li>Add a <code>__str__</code> method to one of your classes so that <code>print()</code>-ing an object
+                    shows something meaningful.</li>
+                <li>Explain, in your own words, the difference between a class attribute and an instance attribute.</li>
+                <li>Explain why <code>super().__init__()</code> is useful when a child class defines its own
+                    <code>__init__</code>.</li>
+            </ol>
+        </section>
+
+        <hr class="divider">
+
+        <section class="summary-box">
+            <h2 style="margin-top:0;">One-Minute Summary</h2>
+            <ul>
+                <li>OOP organizes a program around objects that bundle data (attributes) and behavior (methods)
+                    together.</li>
+                <li>A <strong>class</strong> is a blueprint; an <strong>object</strong> is a real instance built from
+                    that blueprint. <code>self</code> keeps each object's data separate.</li>
+                <li><strong>Encapsulation:</strong> bundle data with the methods that work on it, and control access to
+                    it.</li>
+                <li><strong>Inheritance:</strong> a child class reuses (and can extend or override) a parent class's
+                    behavior; <code>super()</code> calls the parent's version.</li>
+                <li><strong>Polymorphism:</strong> different classes can respond to the same method call, each in their
+                    own way.</li>
+                <li><strong>Abstraction:</strong> hide internal complexity behind a simple method the user can call.
+                </li>
+                <li>Instance attributes belong to one object; class attributes are shared by every object of that class.
+                </li>
+                <li>OOP shows up in game development, web frameworks, GUIs, ORMs, and AI model-building (like PyTorch's
+                    <code>nn.Module</code>).</li>
+            </ul>
+        </section>
+
+        <footer>Mental model: OOP = describe a "thing" once as a class, then create as many independent objects from it
+            as you need, each remembering its own data.</footer>
+
+    </div>
+</body>
+
+</html>
